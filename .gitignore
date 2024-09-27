@@ -1,1 +1,9 @@
 node_modules/
+build/controllers/CursoController.js
+build/controllers/ProfesoresController.js
+build/models/cursoEstudianteModel.js
+build/models/cursoModel.js
+build/models/estudianteModel.js
+build/models/profesorModel.js
+build/routes/cursoRouter.js
+build/routes/profesorRouter.js
