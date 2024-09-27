@@ -106,7 +106,7 @@ const insertar = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
                 where: [{ dni }, { email }],
             });
             if (existeEstudiante) {
-                throw new Error("El estudiante ya existe.");
+                throw new Error("El estudiante ya se encuentra registrado.");
             }
             const nuevoEstudiante = estudianteRepository.create({
                 dni,
@@ -165,7 +165,7 @@ const eliminar = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
             }
             const deleteResult = yield estudianteRepository.delete(id);
             if (deleteResult.affected === 1) {
-                return res.json({ mensaje: "Estudiante eliminado" });
+                return res.json({ mensaje: "Estudiante eliminado correctamente" });
             }
             else {
                 throw new Error("Estudiante no encontrado");

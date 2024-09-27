@@ -102,7 +102,7 @@ export const insertar = async (req: Request, res: Response) => {
       });
 
       if (existeEstudiante) {
-        throw new Error("El estudiante ya existe.");
+        throw new Error("El estudiante ya se encuentra registrado.");
       }
       const nuevoEstudiante = estudianteRepository.create({
         dni,
